@@ -1,0 +1,20 @@
+<changeSet author="users" id="20200922-0">
+	<insert tableName="Customers"> 
+		<column name="City" value="Stavanger"/>
+		<column name="ContactName" value="Tom B. Erichsen"/>
+		<column name="Country" value="Norway"/>
+		<column name="CustomerName" value="Cardinal"/>
+		<column name="Date" valueComputed="GETDATE()"/>
+		<column name="Id" valueComputed="NEWID()"/>
+		<column name="PostalCode" value="4006"/>
+		<column name="Test" value="NULL"/>
+	</insert>
+</changeSet>
+<changeSet author="users" id="20200922-1">
+	<update tableName="table_name"> 
+		<column name="column1" value="value1"/>
+		<column name="column2" valueComputed="NEWID()"/>
+		<column name="column3" value=""/>
+		<where>condition = 'Active' AND  condition2 = '12345'</where>
+	</update>
+</changeSet>
